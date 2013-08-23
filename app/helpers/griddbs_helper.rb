@@ -1,0 +1,2 @@
+module GriddbsHelper
+end
