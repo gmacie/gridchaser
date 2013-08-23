@@ -1,0 +1,37 @@
+<h1>Listing grids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Band</th>
+      <th>Mode</th>
+      <th>Call</th>
+      <th>Grid sqare</th>
+      <th>Country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grids.each do |grid| %>
+      <tr>
+        <td><%= grid.status %></td>
+        <td><%= grid.band %></td>
+        <td><%= grid.mode %></td>
+        <td><%= grid.call %></td>
+        <td><%= grid.grid_sqare %></td>
+        <td><%= grid.country %></td>
+        <td><%= link_to 'Show', grid %></td>
+        <td><%= link_to 'Edit', edit_grid_path(grid) %></td>
+        <td><%= link_to 'Destroy', grid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grid', new_grid_path %>

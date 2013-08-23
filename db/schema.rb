@@ -11,13 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130820115106) do
+ActiveRecord::Schema.define(version: 20130823192627) do
 
   create_table "griddbs", force: true do |t|
     t.string   "entity"
     t.string   "log_of"
     t.string   "call_sign"
     t.integer  "ffma_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "grids", force: true do |t|
+    t.string   "status"
+    t.string   "band"
+    t.string   "mode"
+    t.string   "call"
+    t.string   "grid_sqare"
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "password_digest"
+    t.string   "grid"
+    t.string   "state"
+    t.integer  "zone"
+    t.string   "call_sign"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

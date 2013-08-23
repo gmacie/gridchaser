@@ -1,0 +1,41 @@
+<%= form_for(@grid) do |f| %>
+  <% if @grid.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grid.errors.count, "error") %> prohibited this grid from being saved:</h2>
+
+      <ul>
+      <% @grid.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :band %><br>
+    <%= f.text_field :band %>
+  </div>
+  <div class="field">
+    <%= f.label :mode %><br>
+    <%= f.text_field :mode %>
+  </div>
+  <div class="field">
+    <%= f.label :call %><br>
+    <%= f.text_field :call %>
+  </div>
+  <div class="field">
+    <%= f.label :grid_sqare %><br>
+    <%= f.text_field :grid_sqare %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

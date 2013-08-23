@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  password_digest: MyString
+  grid: MyString
+  state: MyString
+  zone: 1
+  call_sign: MyString
+
+two:
+  name: MyString
+  password_digest: MyString
+  grid: MyString
+  state: MyString
+  zone: 1
+  call_sign: MyString

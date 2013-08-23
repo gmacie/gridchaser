@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @grid.status %>
+</p>
+
+<p>
+  <strong>Band:</strong>
+  <%= @grid.band %>
+</p>
+
+<p>
+  <strong>Mode:</strong>
+  <%= @grid.mode %>
+</p>
+
+<p>
+  <strong>Call:</strong>
+  <%= @grid.call %>
+</p>
+
+<p>
+  <strong>Grid sqare:</strong>
+  <%= @grid.grid_sqare %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @grid.country %>
+</p>
+
+<%= link_to 'Edit', edit_grid_path(@grid) %> |
+<%= link_to 'Back', grids_path %>

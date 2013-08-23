@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  status: MyString
+  band: MyString
+  mode: MyString
+  call: MyString
+  grid_sqare: MyString
+  country: MyString
+
+two:
+  status: MyString
+  band: MyString
+  mode: MyString
+  call: MyString
+  grid_sqare: MyString
+  country: MyString
