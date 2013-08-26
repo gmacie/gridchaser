@@ -50,6 +50,7 @@ end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'smarter_csv'
 
 # Use unicorn as the app server
 # gem 'unicorn'

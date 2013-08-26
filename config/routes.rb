@@ -1,4 +1,9 @@
 Gridchaser::Application.routes.draw do
+  get "pages/home"
+  get "pages/upload"
+  get "pages/activity"
+  get "pages/analysis"
+  get "pages/about"
   resources :grids
 
   resources :users

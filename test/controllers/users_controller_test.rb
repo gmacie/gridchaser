@@ -2,13 +2,18 @@ require 'test_helper'
 
 class UsersControllerTest < ActionController::TestCase
   setup do
+    @input_attributes = {
+      name:                  "sam",
+      password:              "private",
+      password_confirmation: "private"
+    }
     @user = users(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:users)
+    assert_not_nil assigns(:users)   
   end
 
   test "should get new" do
@@ -18,10 +23,12 @@ class UsersControllerTest < ActionController::TestCase
 
   test "should create user" do
     assert_difference('User.count') do
-      post :create, user: { call_sign: @user.call_sign, grid: @user.grid, name: @user.name, password_digest: @user.password_digest, state: @user.state, zone: @user.zone }
+      #post :create, user: { call_sign: @user.call_sign, grid: @user.grid, name: @user.name, password_digest: @user.password_digest, state: @user.state, zone: @user.zone }
+      post :create, user: @input_attributes
     end
 
-    assert_redirected_to user_path(assigns(:user))
+    #assert_redirected_to user_path(assigns(:user))
+    assert_redirected_to users_path
   end
 
   test "should show user" do
@@ -35,8 +42,10 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should update user" do
-    patch :update, id: @user, user: { call_sign: @user.call_sign, grid: @user.grid, name: @user.name, password_digest: @user.password_digest, state: @user.state, zone: @user.zone }
-    assert_redirected_to user_path(assigns(:user))
+    #patch :update, id: @user, user: { call_sign: @user.call_sign, grid: @user.grid, name: @user.name, password_digest: @user.password_digest, state: @user.state, zone: @user.zone }
+    #assert_redirected_to user_path(assigns(:user))
+    put :update, id: @user, user: @input_attributes
+    assert_redirected_to users_path
   end
 
   test "should destroy user" do
