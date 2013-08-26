@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Call:</strong>
+  <%= @activity.call %>
+</p>
+
+<p>
+  <strong>Grid:</strong>
+  <%= @activity.grid %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @activity.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @activity.end_date %>
+</p>
+
+<p>
+  <strong>Home url:</strong>
+  <%= @activity.home_url %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @activity.image_url %>
+</p>
+
+<p>
+  <strong>More info:</strong>
+  <%= @activity.more_info %>
+</p>
+
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Back', activities_path %>

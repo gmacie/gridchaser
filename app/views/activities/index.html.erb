@@ -1,0 +1,39 @@
+<h1>Listing activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Call</th>
+      <th>Grid</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Home url</th>
+      <th>Image url</th>
+      <th>More info</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= activity.call %></td>
+        <td><%= activity.grid %></td>
+        <td><%= activity.start_date %></td>
+        <td><%= activity.end_date %></td>
+        <td><%= activity.home_url %></td>
+        <td><%= activity.image_url %></td>
+        <td><%= activity.more_info %></td>
+        <td><%= link_to 'Show', activity %></td>
+        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Activity', new_activity_path %>

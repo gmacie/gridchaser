@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  call: MyString
+  grid: MyString
+  start_date: 2013-08-26
+  end_date: 2013-08-26
+  home_url: MyString
+  image_url: MyString
+  more_info: MyString
+
+two:
+  call: MyString
+  grid: MyString
+  start_date: 2013-08-26
+  end_date: 2013-08-26
+  home_url: MyString
+  image_url: MyString
+  more_info: MyString
