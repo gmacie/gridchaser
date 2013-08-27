@@ -10,6 +10,7 @@ gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', '~> 2.3.2.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -38,6 +39,7 @@ end
 gem 'will_paginate'
 
 group :test do
+  gem 'capybara'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
 end
@@ -46,6 +48,11 @@ group :development do
   gem 'pry'
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password

@@ -7,8 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <nav>
+        <ul class="nav">
+          <li><%= link_to "Home",          pages_home_path %></li>
+          <li><%= link_to "Activity",      activities_path %></li>
+          <li><%= link_to "About",        pages_about_path %></li>
+        </ul>
 
-<%= yield %>
+      </nav>
+    </div>  
 
+  </heaader>
+  <div class="container">
+    <%= yield %>
+    
+    <%= render 'layouts/footer' %>
+  </div>
 </body>
 </html>
+  
