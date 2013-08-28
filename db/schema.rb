@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130826163028) do
+ActiveRecord::Schema.define(version: 20130828150116) do
 
   create_table "activities", force: true do |t|
     t.string   "call"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20130826163028) do
     t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "qsl_info"
   end
 
   create_table "users", force: true do |t|

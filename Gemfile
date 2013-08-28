@@ -36,7 +36,7 @@ end
 gem 'will_paginate'
 
 group :test, :production do
-  #gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 group :test do
