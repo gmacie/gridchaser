@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130828154408) do
+ActiveRecord::Schema.define(version: 20130829142858) do
 
   create_table "activities", force: true do |t|
     t.string   "call"
@@ -23,15 +23,7 @@ ActiveRecord::Schema.define(version: 20130828154408) do
     t.string   "more_info"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "griddbs", force: true do |t|
-    t.string   "entity"
-    t.string   "log_of"
-    t.string   "call_sign"
-    t.integer  "ffma_count"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "qsl_info"
   end
 
   create_table "grids", force: true do |t|
