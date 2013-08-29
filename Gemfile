@@ -35,8 +35,8 @@ end
 
 gem 'will_paginate'
 
-group :test, :production do
-  #gem 'sqlite3'
+group :test, :development do
+  gem 'sqlite3'
 end
 
 group :test do
@@ -49,6 +49,7 @@ group :development do
   gem 'pry'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'annotate'
 end
 
 group :production do
