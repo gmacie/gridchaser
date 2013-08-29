@@ -3,12 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Status</th>
       <th>Band</th>
-      <th>Mode</th>
       <th>Call</th>
-      <th>Grid sqare</th>
-      <th>Country</th>
+      <th>Grid Square</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,15 +15,14 @@
   <tbody>
     <% @grids.each do |grid| %>
       <tr>
-        <td><%= grid.status %></td>
         <td><%= grid.band %></td>
-        <td><%= grid.mode %></td>
-        <td><%= grid.call %></td>
-        <td><%= grid.grid_sqare %></td>
-        <td><%= grid.country %></td>
+        <td><%= grid.user_id %></td>
+        <td><%= grid.grid_square %></td>
+        <!--
         <td><%= link_to 'Show', grid %></td>
         <td><%= link_to 'Edit', edit_grid_path(grid) %></td>
         <td><%= link_to 'Destroy', grid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        -->
       </tr>
     <% end %>
   </tbody>

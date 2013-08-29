@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130828150116) do
+ActiveRecord::Schema.define(version: 20130828154408) do
 
   create_table "activities", force: true do |t|
     t.string   "call"
@@ -39,11 +39,12 @@ ActiveRecord::Schema.define(version: 20130828150116) do
     t.string   "band"
     t.string   "mode"
     t.string   "call"
-    t.string   "grid_sqare"
     t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "qsl_info"
+    t.string   "grid_square"
+    t.string   "user_id"
   end
 
   create_table "users", force: true do |t|
