@@ -1,4 +1,50 @@
 <h1>Welcome to Grid Chasers</h1>
 
 <h2>Future home of the Most Wanted Grid List</h2>
-<%= image_tag "k5n_el58_2009.jpg" %>
+
+<div id="myCarousel" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag "k5n_el58_2009.jpg" %>
+        <div class="container">
+            <!--<div class="carousel-caption">
+              <h1>K5N EL58 2009</h1>
+              <p class="lead">Just testing what I can do.</p>
+              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+            </div>-->
+        </div>
+      </div>
+    <div class="item">
+    <%= image_tag "n5k_dl79_dl89_2012.jpg" %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Another Rare QSL !</h1>
+          <p class="lead">Have you worked this one ?</p>
+              <!--<a class="btn btn-large btn-primary" href="#">Learn more</a>-->
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <%=image_tag "k5n_dl99_dm90_2011" %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>One more for good measure.</h1>
+          <p class="lead">Third and last qsl for now.</p>
+              <!--<a class="btn btn-large btn-primary" href="#">Browse gallery</a>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div><!-- /.carousel -->
+<script>
+  !function ($) {
+    $(function() {
+      // carousel demo
+      $('#myCarousel').carousel({
+      	interval: 2000
+      })
+    })
+  } (window.jQuery)
+  </script>

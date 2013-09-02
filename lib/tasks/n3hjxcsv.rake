@@ -12,7 +12,7 @@ namespace :grid do
     ffma_count = 0
     ffma_worked = []
 
-    CSV.foreach('n3hjx.csv') do | row |
+    CSV.foreach('aa5am.csv') do | row |
       grid = row[0]
       if grid_array.index(grid)
         #puts "dup" + grid
@@ -21,13 +21,23 @@ namespace :grid do
         if ffma_array.index(grid)
           ffma_worked << grid
           ffma_count = ffma_count + 1
+          status = "FFMA"
           #if qsl_received == "C"
           #  ccount = ccount + 1
           #end
         end
       end
-      Grid.create(grid_square: grid, band: "6M", user_id: "N3HJX")
+      Grid.create(grid_square: grid, band: "6M", user_id: "AA5AM", status: status)
     end
+    puts "Grid Confirmed " + grid_array.count.to_s
+    puts "FFMA Grids  " + ffma_count.to_s
+    diff_array = ffma_array - ffma_worked
+    puts "--------------"
+    puts diff_array.to_s
+    puts "-----------------"
+    puts ffma_worked.to_s
+    puts "-----------------"
   end
+
 end
 

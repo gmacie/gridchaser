@@ -34,6 +34,7 @@ group :doc do
 end
 
 gem 'will_paginate'
+#gem 'table_print'
 
 group :test, :development do
   gem 'sqlite3'
