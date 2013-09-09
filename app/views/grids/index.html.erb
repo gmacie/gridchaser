@@ -1,11 +1,12 @@
 <h1>Listing grids</h1>
 
+<%= will_paginate @grids %>
 <table>
   <thead>
     <tr>
       <th>Band</th>
-      <th>Call</th>
       <th>Grid Square</th>
+      <th>Status</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,8 +17,8 @@
     <% @grids.each do |grid| %>
       <tr>
         <td><%= grid.band %></td>
-        <td><%= grid.user_id %></td>
         <td><%= grid.grid_square %></td>
+        <td><%= grid.status %></td>
         <!--
         <td><%= link_to 'Show', grid %></td>
         <td><%= link_to 'Edit', edit_grid_path(grid) %></td>

@@ -4,7 +4,7 @@ class GridsController < ApplicationController
   # GET /grids
   # GET /grids.json
   def index
-    @grids = Grid.all
+    @grids = Grid.all.page(params[:page]).per_page(22)
   end
 
   # GET /grids/1
