@@ -11,8 +11,10 @@ namespace :grid do
     record_count = 0
     ffma_count = 0
     ffma_worked = []
+    status = ""
 
     CSV.foreach('aa5am.csv') do | row |
+      status = ""
       grid = row[0]
       if grid_array.index(grid)
         #puts "dup" + grid
