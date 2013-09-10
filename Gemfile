@@ -33,6 +33,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'simple_form'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'table_print'
